@@ -13,6 +13,9 @@
 		F184F93B26D35A1000F05C1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F184F93926D35A1000F05C1C /* Main.storyboard */; };
 		F184F93D26D35A1200F05C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F184F93C26D35A1200F05C1C /* Assets.xcassets */; };
 		F184F94026D35A1200F05C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F184F93E26D35A1200F05C1C /* LaunchScreen.storyboard */; };
+		F1CACA4D26D66C0900160E45 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CACA4C26D66C0900160E45 /* ShopListViewController.swift */; };
+		F1CACA5026D66C1B00160E45 /* ShopListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CACA4E26D66C1B00160E45 /* ShopListTableViewController.swift */; };
+		F1CACA5126D66C1B00160E45 /* ShopListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CACA4F26D66C1B00160E45 /* ShopListTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F184F93C26D35A1200F05C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F184F93F26D35A1200F05C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F184F94126D35A1200F05C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1CACA4C26D66C0900160E45 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
+		F1CACA4E26D66C1B00160E45 /* ShopListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableViewController.swift; sourceTree = "<group>"; };
+		F1CACA4F26D66C1B00160E45 /* ShopListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopListTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		F184F93226D35A1000F05C1C /* MVCPractice */ = {
 			isa = PBXGroup;
 			children = (
+				F1CACA4A26D66BE500160E45 /* ShopList */,
 				F184F93326D35A1000F05C1C /* AppDelegate.swift */,
 				F184F93526D35A1000F05C1C /* SceneDelegate.swift */,
 				F184F93726D35A1000F05C1C /* ViewController.swift */,
@@ -65,6 +72,24 @@
 				F184F94126D35A1200F05C1C /* Info.plist */,
 			);
 			path = MVCPractice;
+			sourceTree = "<group>";
+		};
+		F1CACA4A26D66BE500160E45 /* ShopList */ = {
+			isa = PBXGroup;
+			children = (
+				F1CACA4B26D66BF000160E45 /* Cells */,
+				F1CACA4C26D66C0900160E45 /* ShopListViewController.swift */,
+			);
+			path = ShopList;
+			sourceTree = "<group>";
+		};
+		F1CACA4B26D66BF000160E45 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F1CACA4E26D66C1B00160E45 /* ShopListTableViewController.swift */,
+				F1CACA4F26D66C1B00160E45 /* ShopListTableViewController.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F184F94026D35A1200F05C1C /* LaunchScreen.storyboard in Resources */,
+				F1CACA5126D66C1B00160E45 /* ShopListTableViewController.xib in Resources */,
 				F184F93D26D35A1200F05C1C /* Assets.xcassets in Resources */,
 				F184F93B26D35A1000F05C1C /* Main.storyboard in Resources */,
 			);
@@ -137,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1CACA4D26D66C0900160E45 /* ShopListViewController.swift in Sources */,
 				F184F93826D35A1000F05C1C /* ViewController.swift in Sources */,
 				F184F93426D35A1000F05C1C /* AppDelegate.swift in Sources */,
+				F1CACA5026D66C1B00160E45 /* ShopListTableViewController.swift in Sources */,
 				F184F93626D35A1000F05C1C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
