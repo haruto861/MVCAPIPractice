@@ -23,4 +23,7 @@ Pods/*
 *.swp
 !.gitkeep
 .DS_Store
+# Env
+.env
+Environment.swift
 docs

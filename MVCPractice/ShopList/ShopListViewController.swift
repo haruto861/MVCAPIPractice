@@ -16,6 +16,7 @@ final class ShopListViewController: UIViewController {
         shopListTableView.delegate = self
         shopListTableView.dataSource = self
         shopListTableView.register(ShopListTableViewCell.nib(), forCellReuseIdentifier: ShopListTableViewCell.identifier)
+        API.shared.getAPI()
     }
 }
 
