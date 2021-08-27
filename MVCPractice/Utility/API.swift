@@ -14,7 +14,8 @@ final class API {
     private init() {}
 
     func getAPI() {
-        AF.request("https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=\(Env["HOTPEPPER_KEY"] ?? "")&large_area=Z011").response { response in
+        AF.request("https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=\(Env["HOTPEPPER_KEY"] ?? "")&format=json&large_area=Z011").response { response in
+            print(response)
         }
     }
 }
