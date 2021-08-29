@@ -15,7 +15,16 @@ final class API {
 
     func getAPI() {
         AF.request("https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=\(Env["HOTPEPPER_KEY"] ?? "")&format=json&large_area=Z011").response { response in
-            print(response)
+            do {
+                guard let data = response.data else {
+                    return
+                }
+                let shopList = try JSONDecoder().decode(ResultsWrapData.self, from: data)
+                print("json:", shopList) 
+            }
+            catch(let error) {
+                print("取得エラー",error)
+            }
         }
     }
 }

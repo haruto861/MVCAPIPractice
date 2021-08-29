@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BB2B7FECCA33E759AF288F1 /* Pods_MVCPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CC77007CE90CD981E3620C /* Pods_MVCPractice.framework */; };
+		F144C13D26DB4E9B00578BE6 /* ShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F144C13C26DB4E9B00578BE6 /* ShopList.swift */; };
 		F184F93426D35A1000F05C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F184F93326D35A1000F05C1C /* AppDelegate.swift */; };
 		F184F93626D35A1000F05C1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F184F93526D35A1000F05C1C /* SceneDelegate.swift */; };
 		F184F93D26D35A1200F05C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F184F93C26D35A1200F05C1C /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		15CC77007CE90CD981E3620C /* Pods_MVCPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVCPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E8F08F34D5366BBCFABCB7 /* Pods-MVCPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCPractice.release.xcconfig"; path = "Target Support Files/Pods-MVCPractice/Pods-MVCPractice.release.xcconfig"; sourceTree = "<group>"; };
 		8B20D8E6D60EE3D42F98E599 /* Pods-MVCPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCPractice.debug.xcconfig"; path = "Target Support Files/Pods-MVCPractice/Pods-MVCPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		F144C13C26DB4E9B00578BE6 /* ShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopList.swift; sourceTree = "<group>"; };
 		F184F93026D35A1000F05C1C /* MVCPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F184F93326D35A1000F05C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F184F93526D35A1000F05C1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		F184F93226D35A1000F05C1C /* MVCPractice */ = {
 			isa = PBXGroup;
 			children = (
+				F1CACACA26DB345D00160E45 /* Model */,
 				F1CACA6226D7B83D00160E45 /* Utility */,
 				F1CACA5F26D7AB7F00160E45 /* Router */,
 				F1CACA5C26D7A9BF00160E45 /* Extension */,
@@ -147,6 +150,14 @@
 				F1CACA6326D7B85F00160E45 /* API.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		F1CACACA26DB345D00160E45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F144C13C26DB4E9B00578BE6 /* ShopList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				F1CACA5E26D7AA0D00160E45 /* Storyboard+.swift in Sources */,
 				F1CACA6126D7AB8F00160E45 /* Router.swift in Sources */,
 				F184F93426D35A1000F05C1C /* AppDelegate.swift in Sources */,
+				F144C13D26DB4E9B00578BE6 /* ShopList.swift in Sources */,
 				F184F93626D35A1000F05C1C /* SceneDelegate.swift in Sources */,
 				F1CACA6426D7B85F00160E45 /* API.swift in Sources */,
 			);
