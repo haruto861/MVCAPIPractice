@@ -23,7 +23,7 @@ final class API {
                 completion(shopList)
             }
             catch(let error) {
-                print("取得エラー",error)
+                print("取得エラー",error.localizedDescription)
             }
         }
     }

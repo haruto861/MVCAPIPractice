@@ -24,10 +24,10 @@ final class ShopListTableViewCell: UITableViewCell {
         return UINib(nibName: ShopListTableViewCell.identifier, bundle: nil)
     }
 
-    func configure(shopName: String, shopAccess: String, shopImageUrl: String) {
+    func configure(shopName: String, shopAccess: String, shopImageData: Data) {
         shopNameLabel.text = shopName
         shopAccessLabel.text = shopAccess
-        shopImageView.image = UIImage(named: shopImageUrl)
+        shopImageView.image = UIImage(data: shopImageData)
     }
 }
 

@@ -18,7 +18,7 @@ final class ShopListViewController: UIViewController {
         shopListTableView.delegate = self
         shopListTableView.dataSource = self
         shopListTableView.register(ShopListTableViewCell.nib(), forCellReuseIdentifier: ShopListTableViewCell.identifier)
-   
+
         API.shared.getShopData { res in
             self.shopList = res.results.shop
             self.shopListTableView.reloadData()
@@ -26,7 +26,11 @@ final class ShopListViewController: UIViewController {
     }
 }
 
-extension ShopListViewController: UITableViewDelegate {}
+extension ShopListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
 
 extension ShopListViewController: UITableViewDataSource {
 
@@ -36,7 +40,21 @@ extension ShopListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ShopListTableViewCell.identifier) as! ShopListTableViewCell
-        cell.configure(shopName: self.shopList[indexPath.row].name, shopAccess: self.shopList[indexPath.row].address, shopImageUrl: self.shopList[indexPath.row].logoImage)
+
+        DispatchQueue.global().async {
+            do {
+                let imgData = try Data(contentsOf: URL(string: self.shopList[indexPath.row].logoImage)!)
+                DispatchQueue.main.async {
+                    cell.configure(
+                        shopName: ("\(self.shopList[indexPath.row].genre.name) /" + " \(self.shopList[indexPath.row].name)" ),
+                        shopAccess: self.shopList[indexPath.row].address,
+                        shopImageData: imgData
+                    )
+                }
+            }catch let err {
+                print("Error : \(err.localizedDescription)")
+            }
+        }
         return cell
     }
 }
