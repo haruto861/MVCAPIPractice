@@ -16,7 +16,8 @@ final class Router {
 
     func showRoot(window: UIWindow?) {
         let vc = UIStoryboard.shopListViewController
-        window?.rootViewController = vc
+        let nav = UINavigationController(rootViewController: vc)
+        window?.rootViewController = nav
 
         window?.makeKeyAndVisible()
         self.window = window

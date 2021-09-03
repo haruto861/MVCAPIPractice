@@ -9,6 +9,7 @@ import UIKit
 
 final class ShopListViewController: UIViewController {
 
+    @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var shopListTableView: UITableView!
 
     private var shopList: [Shop] = []
@@ -17,6 +18,7 @@ final class ShopListViewController: UIViewController {
         super.viewDidLoad()
         shopListTableView.delegate = self
         shopListTableView.dataSource = self
+        searchBar.delegate = self
         shopListTableView.register(ShopListTableViewCell.nib(), forCellReuseIdentifier: ShopListTableViewCell.identifier)
 
         API.shared.getShopData { res in
@@ -56,5 +58,10 @@ extension ShopListViewController: UITableViewDataSource {
             }
         }
         return cell
+    }
+}
+
+extension ShopListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     }
 }
