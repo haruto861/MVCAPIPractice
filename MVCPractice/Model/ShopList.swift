@@ -21,12 +21,15 @@ struct Shop: Codable {
     let name: String
     let logoImage: String
     let genre: Genre
+    let urls: Urls
+
 
     enum CodingKeys: String, CodingKey {
         case address = "address"
         case name = "name"
         case logoImage = "logo_image"
         case genre = "genre"
+        case urls = "urls"
     }
 }
 
@@ -35,5 +38,13 @@ struct Genre: Codable {
 
     enum CodingKeys: String, CodingKey {
         case name = "name"
+    }
+}
+
+struct Urls: Codable {
+    let pc: String
+
+    enum CodingKeys: String, CodingKey {
+        case pc = "pc"
     }
 }

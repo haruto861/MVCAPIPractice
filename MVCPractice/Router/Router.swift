@@ -22,4 +22,12 @@ final class Router {
         window?.makeKeyAndVisible()
         self.window = window
     }
+
+    func transitMethod(from: UIViewController, next: UIViewController, animted: Bool = true) {
+        if let nav = from.navigationController {
+            nav.pushViewController(next, animated: animted)
+        } else {
+            from.present(next, animated: animted, completion: nil)
+        }
+    }
 }

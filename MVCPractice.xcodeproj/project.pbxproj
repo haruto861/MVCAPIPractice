@@ -73,13 +73,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F137E28F26E314760024BC6A /* ShopDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ShopDetail;
-			sourceTree = "<group>";
-		};
 		F184F92726D35A1000F05C1C = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +99,6 @@
 				F1CACA5F26D7AB7F00160E45 /* Router */,
 				F1CACA5C26D7A9BF00160E45 /* Extension */,
 				F1CACA5226D7A35900160E45 /* ShopList */,
-				F137E28F26E314760024BC6A /* ShopDetail */,
 				F184F93326D35A1000F05C1C /* AppDelegate.swift */,
 				F184F93526D35A1000F05C1C /* SceneDelegate.swift */,
 				F1CACA6626D7C0C900160E45 /* Environment.swift */,

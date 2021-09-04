@@ -12,7 +12,11 @@ final class ShopListViewController: UIViewController {
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var shopListTableView: UITableView!
 
-    private var shopList: [Shop] = []
+    private var shopList: [Shop] = [] {
+        didSet {
+            shopListTableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +33,7 @@ extension ShopListViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        UIApplication.shared.open( NSURL(string: self.shopList[indexPath.row].urls.pc)! as URL, options: [:], completionHandler: nil)
     }
 }
 
@@ -53,7 +57,7 @@ extension ShopListViewController: UITableViewDataSource {
                             shopImageData: imgData
                         )
                     }
-                }catch let err {
+                } catch let err {
                     print("Error : \(err.localizedDescription)")
                 }
             }
@@ -66,9 +70,7 @@ extension ShopListViewController: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         API.shared.getShopData { res in
-            print(res.results.shop)
             self.shopList = res.results.shop.filter({$0.name.contains(searchBar.text ?? "") || $0.genre.name.contains(searchBar.text ?? "")}  )
-            self.shopListTableView.reloadData()
         }
     }
 }
