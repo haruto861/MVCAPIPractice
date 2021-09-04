@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Shop List View Controller-->
+        <!--検索-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="ShopList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ShopListViewController" customModule="MVCPractice" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,26 +17,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8xH-4k-X7y">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VcD-gK-aLM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8xH-4k-X7y" secondAttribute="bottom" id="OMd-Ic-rF9"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8xH-4k-X7y" secondAttribute="trailing" id="Qv3-MJ-nAW"/>
-                            <constraint firstItem="8xH-4k-X7y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TT3-2L-Cch"/>
-                            <constraint firstItem="8xH-4k-X7y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gsc-JX-x1G"/>
+                            <constraint firstItem="8xH-4k-X7y" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Aer-cm-YyL"/>
+                            <constraint firstItem="8xH-4k-X7y" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="DF2-kM-R9b"/>
+                            <constraint firstItem="8xH-4k-X7y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GO4-y2-nA7"/>
+                            <constraint firstItem="VcD-gK-aLM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kVO-kW-T3o"/>
+                            <constraint firstItem="VcD-gK-aLM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="szn-IE-lQR"/>
+                            <constraint firstItem="VcD-gK-aLM" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="wAW-wd-MhV"/>
+                            <constraint firstItem="8xH-4k-X7y" firstAttribute="top" secondItem="VcD-gK-aLM" secondAttribute="bottom" id="zKj-RC-ROd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="検索" id="YGS-ew-e8G"/>
                     <connections>
+                        <outlet property="searchBar" destination="VcD-gK-aLM" id="y8v-Zp-AQD"/>
                         <outlet property="shopListTableView" destination="8xH-4k-X7y" id="Vvb-l6-B8V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="94"/>
+            <point key="canvasLocation" x="1021.7391304347827" y="93.75"/>
         </scene>
     </scenes>
     <resources>

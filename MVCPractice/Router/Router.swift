@@ -16,9 +16,18 @@ final class Router {
 
     func showRoot(window: UIWindow?) {
         let vc = UIStoryboard.shopListViewController
-        window?.rootViewController = vc
+        let nav = UINavigationController(rootViewController: vc)
+        window?.rootViewController = nav
 
         window?.makeKeyAndVisible()
         self.window = window
+    }
+
+    func transitMethod(from: UIViewController, next: UIViewController, animted: Bool = true) {
+        if let nav = from.navigationController {
+            nav.pushViewController(next, animated: animted)
+        } else {
+            from.present(next, animated: animted, completion: nil)
+        }
     }
 }
